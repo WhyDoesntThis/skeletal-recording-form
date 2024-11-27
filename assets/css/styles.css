@@ -162,3 +162,81 @@ textarea {
         grid-template-columns: 1fr;
     }
 }
+
+/* Interactive Skeleton Styles */
+.recording-interface {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.skeleton-container {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.skeleton-container svg {
+    width: 100%;
+    height: auto;
+}
+
+.bone {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.bone.complete {
+    fill: #4CAF50;
+    opacity: 0.7;
+}
+
+.bone.partial {
+    fill: #FFC107;
+    opacity: 0.7;
+}
+
+.bone.absent {
+    fill: #F44336;
+    opacity: 0.7;
+}
+
+.bone-details {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.legend {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.legend ul {
+    list-style: none;
+    padding: 0;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+.color-complete { background: #4CAF50; }
+.color-partial { background: #FFC107; }
+.color-absent { background: #F44336; }

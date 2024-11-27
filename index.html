@@ -16,32 +16,7 @@
         <form id="skeletalRecordForm">
             <!-- Site Information Section -->
             <section id="siteInfo">
-                <!-- Existing site info content -->
-                <h2>Site Information</h2>
-                <div class="form-group">
-                    <label for="siteNumber">Site Name/Number:</label>
-                    <input type="text" id="siteNumber" name="siteNumber" required>
-                </div>
-                <div class="form-group">
-                    <label for="burialNumber">Feature/Burial Number:</label>
-                    <input type="text" id="burialNumber" name="burialNumber" required>
-                </div>
-                <div class="form-group">
-                    <label for="skeletonNumber">Burial/Skeleton Number:</label>
-                    <input type="text" id="skeletonNumber" name="skeletonNumber" required>
-                </div>
-                <div class="form-group">
-                    <label for="collectionLocation">Present Location of Collection:</label>
-                    <input type="text" id="collectionLocation" name="collectionLocation" required>
-                </div>
-                <div class="form-group">
-                    <label for="observer">Observer:</label>
-                    <input type="text" id="observer" name="observer" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
+                <!-- Previous site info content -->
             </section>
 
             <!-- Adult Skeleton Section -->
@@ -51,109 +26,21 @@
                 <!-- Anterior View -->
                 <div class="skeleton-view anterior">
                     <h3>Anterior View</h3>
-                    <div class="skeleton-container">
-                        <div class="skeleton-grid">
-                            <!-- Cranium -->
-                            <div class="bone-group cranium">
-                                <h4>Cranium</h4>
-                                <div class="form-group">
-                                    <label for="cranium_anterior">Preservation:</label>
-                                    <select id="cranium_anterior" name="cranium_anterior">
-                                        <option value="">Select...</option>
-                                        <option value="complete">Complete</option>
-                                        <option value="partial">Partial</option>
-                                        <option value="absent">Absent</option>
-                                    </select>
-                                    <label for="cranium_anterior_notes">Notes:</label>
-                                    <textarea id="cranium_anterior_notes" name="cranium_anterior_notes"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Vertebrae -->
-                            <div class="bone-group vertebrae">
-                                <h4>Vertebrae</h4>
-                                <div class="vertebrae-grid">
-                                    <!-- Cervical -->
-                                    <div class="vertebrae-section">
-                                        <h5>Cervical (C1-C7)</h5>
-                                        <div class="form-group">
-                                            <label>Present/Complete:</label>
-                                            <input type="number" min="0" max="7" name="cervical_present" id="cervical_present">
-                                            <label>Partial:</label>
-                                            <input type="number" min="0" max="7" name="cervical_partial" id="cervical_partial">
-                                        </div>
-                                    </div>
-
-                                    <!-- Thoracic -->
-                                    <div class="vertebrae-section">
-                                        <h5>Thoracic (T1-T12)</h5>
-                                        <div class="form-group">
-                                            <label>Present/Complete:</label>
-                                            <input type="number" min="0" max="12" name="thoracic_present" id="thoracic_present">
-                                            <label>Partial:</label>
-                                            <input type="number" min="0" max="12" name="thoracic_partial" id="thoracic_partial">
-                                        </div>
-                                    </div>
-
-                                    <!-- Lumbar -->
-                                    <div class="vertebrae-section">
-                                        <h5>Lumbar (L1-L5)</h5>
-                                        <div class="form-group">
-                                            <label>Present/Complete:</label>
-                                            <input type="number" min="0" max="5" name="lumbar_present" id="lumbar_present">
-                                            <label>Partial:</label>
-                                            <input type="number" min="0" max="5" name="lumbar_partial" id="lumbar_partial">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sternum -->
-                            <div class="bone-group sternum">
-                                <h4>Sternum</h4>
-                                <div class="form-group">
-                                    <label>Manubrium:</label>
-                                    <select name="manubrium" id="manubrium">
-                                        <option value="">Select...</option>
-                                        <option value="complete">Complete</option>
-                                        <option value="partial">Partial</option>
-                                        <option value="absent">Absent</option>
-                                    </select>
-                                    <label>Body:</label>
-                                    <select name="sternum_body" id="sternum_body">
-                                        <option value="">Select...</option>
-                                        <option value="complete">Complete</option>
-                                        <option value="partial">Partial</option>
-                                        <option value="absent">Absent</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Ribs -->
-                            <div class="bone-group ribs">
-                                <h4>Ribs</h4>
-                                <div class="ribs-grid">
-                                    <div class="side-group">
-                                        <h5>Left</h5>
-                                        <div class="form-group">
-                                            <label>Present/Complete:</label>
-                                            <input type="number" min="0" max="12" name="ribs_left_present" id="ribs_left_present">
-                                            <label>Partial:</label>
-                                            <input type="number" min="0" max="12" name="ribs_left_partial" id="ribs_left_partial">
-                                        </div>
-                                    </div>
-                                    <div class="side-group">
-                                        <h5>Right</h5>
-                                        <div class="form-group">
-                                            <label>Present/Complete:</label>
-                                            <input type="number" min="0" max="12" name="ribs_right_present" id="ribs_right_present">
-                                            <label>Partial:</label>
-                                            <input type="number" min="0" max="12" name="ribs_right_partial" id="ribs_right_partial">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="recording-interface">
+                        <div class="skeleton-container">
+                            <!-- SVG will be loaded here -->
                         </div>
+                        <div class="bone-details" id="boneDetails">
+                            <!-- Details panel will appear here when a bone is selected -->
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <h4>Legend</h4>
+                        <ul>
+                            <li><span class="color-complete"></span> Present/Complete</li>
+                            <li><span class="color-partial"></span> Partial</li>
+                            <li><span class="color-absent"></span> Absent</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -175,5 +62,6 @@
 
     <script src="assets/js/storage.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/skeleton-interface.js"></script>
 </body>
 </html>

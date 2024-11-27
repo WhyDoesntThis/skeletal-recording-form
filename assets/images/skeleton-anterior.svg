@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Base skeleton outline matching the form diagram -->
+    <g id="skeleton" fill="none" stroke="black" stroke-width="1">
+        <!-- Cranium -->
+        <path id="cranium" 
+              d="M160 60 C160 40, 240 40, 240 60 C240 80, 200 100, 200 100 C200 100, 160 80, 160 60"
+              class="bone"
+              data-bone-name="Cranium"
+              data-bone-type="cranial"/>
+              
+        <!-- Mandible -->
+        <path id="mandible"
+              d="M160 100 C160 120, 240 120, 240 100"
+              class="bone"
+              data-bone-name="Mandible"
+              data-bone-type="cranial"/>
+
+        <!-- Cervical Vertebrae -->
+        <g id="cervical_vertebrae" class="bone-group">
+            <rect x="190" y="120" width="20" height="60" class="bone"
+                  data-bone-name="Cervical Vertebrae"
+                  data-bone-type="vertebrae"/>
+        </g>
+
+        <!-- Add more bones following the form diagram... -->
+    </g>
+</svg>
