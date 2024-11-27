@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Previous head section remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 
     <main>
         <form id="skeletalRecordForm">
-            <!-- Site Information Section -->
+            <!-- Previous site info section remains the same -->
             <section id="siteInfo">
                 <h2>Site Information</h2>
                 <div class="form-group">
@@ -43,70 +44,78 @@
                 </div>
             </section>
 
-            <!-- Adult Skeleton Section -->
-            <section id="adultSkeleton">
-                <h2>Adult Skeleton Recording</h2>
+            <!-- Cranial Measurements Section -->
+            <section id="cranialMeasurements">
+                <h2>Cranial Measurements</h2>
+                <p class="instructions">Record all measurements to the nearest millimetre</p>
                 
-                <!-- Anterior View -->
-                <div class="skeleton-view">
-                    <h3>Anterior View</h3>
+                <div class="measurements-grid">
+                    <!-- GOL -->
                     <div class="form-group">
-                        <label for="anteriorNotes">Notes:</label>
-                        <textarea id="anteriorNotes" name="anteriorNotes" rows="4"></textarea>
+                        <label for="GOL" title="Maximum length from glabella to opisthocranion">GOL - Maximum Cranial Length:</label>
+                        <input type="number" id="GOL" name="GOL" min="0" step="1">
                     </div>
-                </div>
 
-                <!-- Posterior View -->
-                <div class="skeleton-view">
-                    <h3>Posterior View</h3>
+                    <!-- BBH -->
                     <div class="form-group">
-                        <label for="posteriorNotes">Notes:</label>
-                        <textarea id="posteriorNotes" name="posteriorNotes" rows="4"></textarea>
+                        <label for="BBH" title="Distance from basion to bregma">BBH - Basion-Bregma Height:</label>
+                        <input type="number" id="BBH" name="BBH" min="0" step="1">
+                    </div>
+
+                    <!-- XCB -->
+                    <div class="form-group">
+                        <label for="XCB" title="Maximum width perpendicular to midsagittal plane">XCB - Maximum Cranial Breadth:</label>
+                        <input type="number" id="XCB" name="XCB" min="0" step="1">
+                    </div>
+
+                    <!-- ZYB -->
+                    <div class="form-group">
+                        <label for="ZYB" title="Maximum breadth across zygomatic arches">ZYB - Bizygomatic Breadth:</label>
+                        <input type="number" id="ZYB" name="ZYB" min="0" step="1">
+                    </div>
+
+                    <!-- BNL -->
+                    <div class="form-group">
+                        <label for="BNL" title="Direct distance from nasion to basion">BNL - Basion-Nasion Length:</label>
+                        <input type="number" id="BNL" name="BNL" min="0" step="1">
                     </div>
                 </div>
             </section>
 
-            <!-- Dental Inventory Section -->
-            <section id="dentalInventory">
-                <h2>Dental Inventory</h2>
-                <div class="dental-sections">
-                    <!-- Permanent Dentition -->
-                    <div class="permanent-teeth">
-                        <h3>Permanent Dentition</h3>
-                        <div class="maxillary">
-                            <h4>Maxillary</h4>
-                            <!-- Teeth inputs will be added here -->
+            <!-- Post-Cranial Measurements Section -->
+            <section id="postCranialMeasurements">
+                <h2>Post-Cranial Measurements</h2>
+                
+                <div class="bone-section">
+                    <h3>Humerus</h3>
+                    <div class="measurements-grid bilateral">
+                        <!-- Left side -->
+                        <div class="side-measurements">
+                            <h4>Left</h4>
+                            <div class="form-group">
+                                <label for="humLength_L">Maximum Length:</label>
+                                <input type="number" id="humLength_L" name="humLength_L" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="humHead_L">Head Diameter:</label>
+                                <input type="number" id="humHead_L" name="humHead_L" min="0" step="1">
+                            </div>
                         </div>
-                        <div class="mandibular">
-                            <h4>Mandibular</h4>
-                            <!-- Teeth inputs will be added here -->
+                        
+                        <!-- Right side -->
+                        <div class="side-measurements">
+                            <h4>Right</h4>
+                            <div class="form-group">
+                                <label for="humLength_R">Maximum Length:</label>
+                                <input type="number" id="humLength_R" name="humLength_R" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="humHead_R">Head Diameter:</label>
+                                <input type="number" id="humHead_R" name="humHead_R" min="0" step="1">
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Deciduous Dentition -->
-                    <div class="deciduous-teeth">
-                        <h3>Deciduous Dentition</h3>
-                        <!-- Deciduous teeth inputs will be added here -->
-                    </div>
                 </div>
-            </section>
-
-            <!-- Measurements Section -->
-            <section id="measurements">
-                <h2>Measurements</h2>
-                <div class="measurement-sections">
-                    <h3>Cranial Measurements</h3>
-                    <!-- Cranial measurement inputs will be added here -->
-                    
-                    <h3>Postcranial Measurements</h3>
-                    <!-- Postcranial measurement inputs will be added here -->
-                </div>
-            </section>
-
-            <!-- Sex/Age Assessment Section -->
-            <section id="sexAge">
-                <h2>Sex and Age Assessment</h2>
-                <!-- Sex and age assessment inputs will be added -->
             </section>
 
             <!-- Navigation Buttons -->
