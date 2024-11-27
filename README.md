@@ -1,31 +1,18 @@
-# Skeletal Recording Form
+# Skeletal Recording Form - Production Version
 
-A digital form system for bioarchaeological skeletal recording. This project aims to streamline the process of recording skeletal remains in archaeological contexts.
+## Deployment Instructions
+1. Copy all contents to your web server
+2. Ensure all files maintain their relative paths
+3. Access through index.html in the src directory
 
-## Purpose
+## File Structure
+- src/index.html (main entry point)
+- css/styles.css (styling)
+- js/main.js (core functionality)
+- js/storage.js (data management)
 
-This digital form system replaces traditional paper-based recording methods for documenting skeletal remains in bioarchaeology. It provides:
-- Standardized recording formats
-- Digital data storage
-- Easy data export
-- Consistent documentation
+## Version Information
+- Release Date: November 27, 2024
+- Version: 1.0.0
 
-## Features
-- Adult skeleton recording (anterior and posterior views)
-- Dental inventory
-- Age and sex assessment
-- Metric and non-metric traits
-- Measurement recording
-- Data export capabilities
-
-## Usage
-[Documentation in development]
-
-## Contributing
-Contributions are welcome. Please read our contributing guidelines before submitting pull requests.
-
-## License
-[License information pending]
-
-## Contact
-[Your contact information if you want to include it]
+For documentation, visit: https://github.com/WhyDoesntThis/skeletal-recording-form

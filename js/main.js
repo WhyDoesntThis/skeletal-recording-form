@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (validateForm()) {
             const data = getFormData();
-            console.log('Form submitted:', data);
+            
             // Here you would typically send the data to a server
             alert('Form submitted successfully!');
         }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .sort((a, b) => b.date.localeCompare(a.date));
 
         // You could display this list somewhere in your form
-        console.log('Saved forms:', savedForms);
+        
     }
 
     // Input validation for measurements
