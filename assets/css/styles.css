@@ -93,3 +93,72 @@ button[type="button"] {
 button:hover {
     opacity: 0.9;
 }
+
+/* Skeleton Recording Styles */
+.skeleton-view {
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.skeleton-grid {
+    display: grid;
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.bone-group {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.bone-group h4 {
+    color: #444;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.vertebrae-grid,
+.ribs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.vertebrae-section,
+.side-group {
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.vertebrae-section h5,
+.side-group h5 {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .vertebrae-grid,
+    .ribs-grid {
+        grid-template-columns: 1fr;
+    }
+}

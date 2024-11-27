@@ -16,6 +16,7 @@
         <form id="skeletalRecordForm">
             <!-- Site Information Section -->
             <section id="siteInfo">
+                <!-- Existing site info content -->
                 <h2>Site Information</h2>
                 <div class="form-group">
                     <label for="siteNumber">Site Name/Number:</label>
@@ -40,6 +41,120 @@
                 <div class="form-group">
                     <label for="date">Date:</label>
                     <input type="date" id="date" name="date" required>
+                </div>
+            </section>
+
+            <!-- Adult Skeleton Section -->
+            <section id="adultSkeleton">
+                <h2>Adult Skeleton Recording</h2>
+                
+                <!-- Anterior View -->
+                <div class="skeleton-view anterior">
+                    <h3>Anterior View</h3>
+                    <div class="skeleton-container">
+                        <div class="skeleton-grid">
+                            <!-- Cranium -->
+                            <div class="bone-group cranium">
+                                <h4>Cranium</h4>
+                                <div class="form-group">
+                                    <label for="cranium_anterior">Preservation:</label>
+                                    <select id="cranium_anterior" name="cranium_anterior">
+                                        <option value="">Select...</option>
+                                        <option value="complete">Complete</option>
+                                        <option value="partial">Partial</option>
+                                        <option value="absent">Absent</option>
+                                    </select>
+                                    <label for="cranium_anterior_notes">Notes:</label>
+                                    <textarea id="cranium_anterior_notes" name="cranium_anterior_notes"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Vertebrae -->
+                            <div class="bone-group vertebrae">
+                                <h4>Vertebrae</h4>
+                                <div class="vertebrae-grid">
+                                    <!-- Cervical -->
+                                    <div class="vertebrae-section">
+                                        <h5>Cervical (C1-C7)</h5>
+                                        <div class="form-group">
+                                            <label>Present/Complete:</label>
+                                            <input type="number" min="0" max="7" name="cervical_present" id="cervical_present">
+                                            <label>Partial:</label>
+                                            <input type="number" min="0" max="7" name="cervical_partial" id="cervical_partial">
+                                        </div>
+                                    </div>
+
+                                    <!-- Thoracic -->
+                                    <div class="vertebrae-section">
+                                        <h5>Thoracic (T1-T12)</h5>
+                                        <div class="form-group">
+                                            <label>Present/Complete:</label>
+                                            <input type="number" min="0" max="12" name="thoracic_present" id="thoracic_present">
+                                            <label>Partial:</label>
+                                            <input type="number" min="0" max="12" name="thoracic_partial" id="thoracic_partial">
+                                        </div>
+                                    </div>
+
+                                    <!-- Lumbar -->
+                                    <div class="vertebrae-section">
+                                        <h5>Lumbar (L1-L5)</h5>
+                                        <div class="form-group">
+                                            <label>Present/Complete:</label>
+                                            <input type="number" min="0" max="5" name="lumbar_present" id="lumbar_present">
+                                            <label>Partial:</label>
+                                            <input type="number" min="0" max="5" name="lumbar_partial" id="lumbar_partial">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sternum -->
+                            <div class="bone-group sternum">
+                                <h4>Sternum</h4>
+                                <div class="form-group">
+                                    <label>Manubrium:</label>
+                                    <select name="manubrium" id="manubrium">
+                                        <option value="">Select...</option>
+                                        <option value="complete">Complete</option>
+                                        <option value="partial">Partial</option>
+                                        <option value="absent">Absent</option>
+                                    </select>
+                                    <label>Body:</label>
+                                    <select name="sternum_body" id="sternum_body">
+                                        <option value="">Select...</option>
+                                        <option value="complete">Complete</option>
+                                        <option value="partial">Partial</option>
+                                        <option value="absent">Absent</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Ribs -->
+                            <div class="bone-group ribs">
+                                <h4>Ribs</h4>
+                                <div class="ribs-grid">
+                                    <div class="side-group">
+                                        <h5>Left</h5>
+                                        <div class="form-group">
+                                            <label>Present/Complete:</label>
+                                            <input type="number" min="0" max="12" name="ribs_left_present" id="ribs_left_present">
+                                            <label>Partial:</label>
+                                            <input type="number" min="0" max="12" name="ribs_left_partial" id="ribs_left_partial">
+                                        </div>
+                                    </div>
+                                    <div class="side-group">
+                                        <h5>Right</h5>
+                                        <div class="form-group">
+                                            <label>Present/Complete:</label>
+                                            <input type="number" min="0" max="12" name="ribs_right_present" id="ribs_right_present">
+                                            <label>Partial:</label>
+                                            <input type="number" min="0" max="12" name="ribs_right_partial" id="ribs_right_partial">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
