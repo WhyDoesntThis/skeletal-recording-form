@@ -114,3 +114,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     updateSavedFormsList();
 });
+
+// Initialize storage
+const formStorage = new SkeletalFormStorage();
+
+// Add export buttons event listeners
+document.getElementById('exportCSV').addEventListener('click', function() {
+    const formData = getFormData();
+    formStorage.exportToCSV(formData);
+});
+
+document.getElementById('exportJSON').addEventListener('click', function() {
+    const formData = getFormData();
+    formStorage.exportToJSON(formData);
+});
+
+// Update HTML to include export buttons
