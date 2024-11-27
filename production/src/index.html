@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head section remains the same -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital form system for bioarchaeological skeletal recording">
+    <title>Skeletal Recording Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Skeletal Recording Form</h1>
+    </header>
+
+    <main>
+        <form id="skeletalRecordForm">
+            <!-- Previous site info section remains the same -->
+            <section id="siteInfo">
+                <h2>Site Information</h2>
+                <div class="form-group">
+                    <label for="siteNumber">Site Name/Number:</label>
+                    <input type="text" id="siteNumber" name="siteNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="burialNumber">Feature/Burial Number:</label>
+                    <input type="text" id="burialNumber" name="burialNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="skeletonNumber">Burial/Skeleton Number:</label>
+                    <input type="text" id="skeletonNumber" name="skeletonNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="collectionLocation">Present Location of Collection:</label>
+                    <input type="text" id="collectionLocation" name="collectionLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="observer">Observer:</label>
+                    <input type="text" id="observer" name="observer" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </section>
+
+            <!-- Cranial Measurements Section -->
+            <section id="cranialMeasurements">
+                <h2>Cranial Measurements</h2>
+                <p class="instructions">Record all measurements to the nearest millimetre</p>
+                
+                <div class="measurements-grid">
+                    <!-- GOL -->
+                    <div class="form-group">
+                        <label for="GOL" title="Maximum length from glabella to opisthocranion">GOL - Maximum Cranial Length:</label>
+                        <input type="number" id="GOL" name="GOL" min="0" step="1">
+                    </div>
+
+                    <!-- BBH -->
+                    <div class="form-group">
+                        <label for="BBH" title="Distance from basion to bregma">BBH - Basion-Bregma Height:</label>
+                        <input type="number" id="BBH" name="BBH" min="0" step="1">
+                    </div>
+
+                    <!-- XCB -->
+                    <div class="form-group">
+                        <label for="XCB" title="Maximum width perpendicular to midsagittal plane">XCB - Maximum Cranial Breadth:</label>
+                        <input type="number" id="XCB" name="XCB" min="0" step="1">
+                    </div>
+
+                    <!-- ZYB -->
+                    <div class="form-group">
+                        <label for="ZYB" title="Maximum breadth across zygomatic arches">ZYB - Bizygomatic Breadth:</label>
+                        <input type="number" id="ZYB" name="ZYB" min="0" step="1">
+                    </div>
+
+                    <!-- BNL -->
+                    <div class="form-group">
+                        <label for="BNL" title="Direct distance from nasion to basion">BNL - Basion-Nasion Length:</label>
+                        <input type="number" id="BNL" name="BNL" min="0" step="1">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Post-Cranial Measurements Section -->
+            <section id="postCranialMeasurements">
+                <h2>Post-Cranial Measurements</h2>
+                
+                <div class="bone-section">
+                    <h3>Humerus</h3>
+                    <div class="measurements-grid bilateral">
+                        <!-- Left side -->
+                        <div class="side-measurements">
+                            <h4>Left</h4>
+                            <div class="form-group">
+                                <label for="humLength_L">Maximum Length:</label>
+                                <input type="number" id="humLength_L" name="humLength_L" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="humHead_L">Head Diameter:</label>
+                                <input type="number" id="humHead_L" name="humHead_L" min="0" step="1">
+                            </div>
+                        </div>
+                        
+                        <!-- Right side -->
+                        <div class="side-measurements">
+                            <h4>Right</h4>
+                            <div class="form-group">
+                                <label for="humLength_R">Maximum Length:</label>
+                                <input type="number" id="humLength_R" name="humLength_R" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="humHead_R">Head Diameter:</label>
+                                <input type="number" id="humHead_R" name="humHead_R" min="0" step="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Buttons -->
+            <nav class="form-navigation">
+                <button type="button" id="exportCSV">Export CSV</button>
+                <button type="button" id="exportJSON">Export JSON</button>
+                <button type="button" id="saveBtn">Save Draft</button>
+                <button type="button" id="printBtn">Print Form</button>
+                <button type="submit">Submit Form</button>
+            </nav>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Skeletal Recording System</p>
+    </footer>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
