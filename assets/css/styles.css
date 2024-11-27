@@ -240,3 +240,40 @@ textarea {
 .color-complete { background: #4CAF50; }
 .color-partial { background: #FFC107; }
 .color-absent { background: #F44336; }
+/* Enhanced bone interaction styles */
+.bone {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.bone:hover {
+    stroke-width: 2;
+    filter: brightness(1.2);
+}
+
+.bone.selected {
+    stroke: #4CAF50;
+    stroke-width: 2;
+}
+
+.bone.complete {
+    fill: rgba(76, 175, 80, 0.6);  /* Green with transparency */
+}
+
+.bone.partial {
+    fill: rgba(255, 193, 7, 0.6);  /* Yellow with transparency */
+}
+
+.bone.absent {
+    fill: rgba(244, 67, 54, 0.6);  /* Red with transparency */
+}
+
+.bone-group {
+    transition: opacity 0.3s ease;
+}
+
+.bone-group:hover {
+    opacity: 0.9;
+}
